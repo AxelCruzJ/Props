@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Registro local y rápido de propinas para meseros.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Mis propinas</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">REGISTRO LOCAL</p>
+        <h1>Mis propinas</h1>
+      </div>
+      <button id="installButton" class="icon-button hidden" aria-label="Instalar aplicación">＋</button>
+    </header>
+
+    <section class="summary-card" aria-labelledby="summaryTitle">
+      <div class="summary-heading">
+        <div>
+          <p class="eyebrow muted">RESUMEN DEL DÍA</p>
+          <h2 id="summaryTitle">$0.00 <span>neto</span></h2>
+        </div>
+        <span id="todayLabel" class="date-label"></span>
+      </div>
+      <div class="summary-grid">
+        <div><span>Propinas recibidas</span><strong id="summaryTips">$0.00</strong></div>
+        <div><span>Para caja (5%)</span><strong id="summaryHouse">$0.00</strong></div>
+        <div><span>Registros</span><strong id="summaryCount">0</strong></div>
+      </div>
+    </section>
+
+    <section class="form-card" aria-labelledby="newRecordTitle">
+      <div class="section-heading">
+        <div><p class="eyebrow muted">NUEVO REGISTRO</p><h2 id="newRecordTitle">Agregar cuenta</h2></div>
+        <span class="required">Rápido</span>
+      </div>
+
+      <form id="tipForm">
+        <label for="billTotal">Total de la cuenta</label>
+        <div class="money-input"><span>$</span><input id="billTotal" name="billTotal" inputmode="decimal" autocomplete="off" placeholder="0.00" required></div>
+
+        <div class="tip-label-row"><label>Mi propina</label><div class="segmented" role="group" aria-label="Tipo de propina"><button type="button" class="segment active" data-mode="percent">%</button><button type="button" class="segment" data-mode="money">$</button></div></div>
+        <div class="money-input"><span id="tipPrefix">%</span><input id="tipValue" name="tipValue" inputmode="decimal" autocomplete="off" placeholder="0" required></div>
+        <p id="tipHelp" class="helper">Escribe el porcentaje que te dejaron.</p>
+
+        <div class="live-result" aria-live="polite">
+          <div><span>Para caja (5%)</span><strong id="liveHouse">$0.00</strong></div>
+          <div><span>Mi propina neta</span><strong id="liveNet">$0.00</strong></div>
+        </div>
+        <button class="primary-button" type="submit">Guardar registro <span>→</span></button>
+      </form>
+    </section>
+
+    <section class="history-section" aria-labelledby="historyTitle">
+      <div class="section-heading"><div><p class="eyebrow muted">HISTORIAL</p><h2 id="historyTitle">Registros del día</h2></div><button id="clearButton" class="text-button hidden">Borrar todo</button></div>
+      <div id="history" class="history-list"></div>
+      <div id="emptyState" class="empty-state"><div class="empty-icon">＋</div><p>Aún no hay registros.</p><span>Agrega tu primera cuenta arriba.</span></div>
+    </section>
+    <footer><span>Los datos viven solo en este dispositivo.</span><button id="howButton" class="text-button">¿Cómo se calcula?</button></footer>
+  </main>
+  <div id="toast" class="toast" role="status"></div>
+  <dialog id="howDialog"><button class="dialog-close" id="closeDialog" aria-label="Cerrar">×</button><p class="eyebrow muted">CÁLCULO</p><h2>Claro y sin vueltas</h2><p>Siempre se aparta el <strong>5% del total de la cuenta</strong> para caja.</p><p>Tu neto es la propina que recibiste menos ese 5%. Por ejemplo, en una cuenta de $1,000 con 10% de propina: $100 recibidos − $50 para caja = <strong>$50 netos</strong>.</p></dialog>
+  <script src="app.js"></script>
+</body>
+</html>
