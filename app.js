@@ -31,4 +31,4 @@ $('editPercent').addEventListener('click',()=>{editMode='percent';syncEditMode()
 function showToast(msg){const t=$('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)}
 $('howButton').addEventListener('click',()=>$('howDialog').showModal());$('closeDialog').addEventListener('click',()=>$('howDialog').close());
 let deferredPrompt;$('installButton').addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null;$('installButton').classList.add('hidden')}});window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;$('installButton').classList.remove('hidden')});
-if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js?v=3');ensureDay();renderLive();render();
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw-v3.js');ensureDay();renderLive();render();
