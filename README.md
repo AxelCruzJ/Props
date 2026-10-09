@@ -13,7 +13,12 @@ PWA local para registrar propinas. No usa cuentas, servidor ni base de datos: lo
 
 - Caja: 5% del total de la cuenta, siempre.
 - Propina neta: propina recibida − caja.
+- La pantalla también muestra la propina total antes del descuento; por ejemplo, 12% de $1,000 = $120.
 - Ejemplo: cuenta de $1,000 y propina de 10% → $100 recibidos, $50 para caja y $50 netos.
+
+## Días
+
+El botón **Nuevo día** inicia una sección nueva sin borrar los registros anteriores. Los días anteriores aparecen abajo del historial y se pueden abrir para consultarlos.
 
 ## Privacidad y respaldo
 

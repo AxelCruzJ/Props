@@ -8,6 +8,7 @@
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <style>.record-actions{grid-column:1/-1;display:flex;gap:14px;border-top:1px solid #eee;padding-top:8px;margin-top:4px}.record-actions .text-button{font-size:10px}.edit-preview{margin-top:16px}</style>
   <title>Mis propinas</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
           <p class="eyebrow muted">RESUMEN DEL DÍA</p>
           <h2 id="summaryTitle">$0.00 <span>neto</span></h2>
         </div>
-        <span id="todayLabel" class="date-label"></span>
+        <div class="summary-actions"><span id="todayLabel" class="date-label"></span><button id="newDayButton" class="small-button" type="button">＋ Nuevo día</button></div>
       </div>
       <div class="summary-grid">
         <div><span>Propinas recibidas</span><strong id="summaryTips">$0.00</strong></div>
@@ -50,6 +51,7 @@
         <p id="tipHelp" class="helper">Escribe el porcentaje que te dejaron.</p>
 
         <div class="live-result" aria-live="polite">
+          <div><span>Propina total</span><strong id="liveGross">$0.00</strong></div>
           <div><span>Para caja (5%)</span><strong id="liveHouse">$0.00</strong></div>
           <div><span>Mi propina neta</span><strong id="liveNet">$0.00</strong></div>
         </div>
@@ -61,11 +63,13 @@
       <div class="section-heading"><div><p class="eyebrow muted">HISTORIAL</p><h2 id="historyTitle">Registros del día</h2></div><button id="clearButton" class="text-button hidden">Borrar todo</button></div>
       <div id="history" class="history-list"></div>
       <div id="emptyState" class="empty-state"><div class="empty-icon">＋</div><p>Aún no hay registros.</p><span>Agrega tu primera cuenta arriba.</span></div>
+      <div id="daysSection" class="days-section hidden"><p class="eyebrow muted">DÍAS ANTERIORES</p><div id="daysList" class="days-list"></div></div>
     </section>
     <footer><span>Los datos viven solo en este dispositivo.</span><button id="howButton" class="text-button">¿Cómo se calcula?</button></footer>
   </main>
   <div id="toast" class="toast" role="status"></div>
   <dialog id="howDialog"><button class="dialog-close" id="closeDialog" aria-label="Cerrar">×</button><p class="eyebrow muted">CÁLCULO</p><h2>Claro y sin vueltas</h2><p>Siempre se aparta el <strong>5% del total de la cuenta</strong> para caja.</p><p>Tu neto es la propina que recibiste menos ese 5%. Por ejemplo, en una cuenta de $1,000 con 10% de propina: $100 recibidos − $50 para caja = <strong>$50 netos</strong>.</p></dialog>
+  <dialog id="editDialog"><button class="dialog-close" id="closeEditDialog" aria-label="Cerrar">×</button><p class="eyebrow muted">CORREGIR REGISTRO</p><h2>Editar cuenta</h2><form id="editForm"><label for="editBill">Total de la cuenta</label><div class="money-input"><span>$</span><input id="editBill" inputmode="decimal" required></div><div class="tip-label-row"><label>Propina</label><div class="segmented"><button type="button" id="editPercent" class="segment active">%</button><button type="button" id="editMoney" class="segment">$</button></div></div><div class="money-input"><span id="editPrefix">%</span><input id="editTip" inputmode="decimal" required></div><div class="live-result edit-preview"><div><span>Propina total</span><strong id="editGross">$0.00</strong></div><div><span>Para caja (5%)</span><strong id="editHouse">$0.00</strong></div><div><span>Mi neto</span><strong id="editNet">$0.00</strong></div></div><button class="primary-button" type="submit">Guardar cambios <span>→</span></button></form></dialog>
   <script src="app.js"></script>
 </body>
 </html>
