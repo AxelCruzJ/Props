@@ -123,3 +123,40 @@
 :root[data-theme=purple] .day-status{background:#49365c;color:#e0c9f5}
 :root[data-theme=light] .swatch-light{background:#f4f4f2;border:1px solid #ccc}
 .cancel-closure{display:block;margin:16px auto 0;font-size:12px}
+
+
+/* Black: interfaz nocturna real; White conserva el tema claro original */
+:root[data-theme=black]{--theme-accent:#e5e7e9;--ink:#f0f1f2;--muted:#a3a8ae;--line:#373b40;--paper:#1c2024;--soft:#292d32}
+:root[data-theme=black] body{background:#101215;color:#f0f1f2}
+:root[data-theme=black] .summary-card{background:#191c20;border-color:#292d32;color:#f5f5f5}
+:root[data-theme=black] .summary-card .muted,:root[data-theme=black] .summary-grid span{color:#aeb3b9}
+:root[data-theme=black] .form-card,:root[data-theme=black] .analysis-grid article,:root[data-theme=black] .history-entry,:root[data-theme=black] .history-day,:root[data-theme=black] .history-item,:root[data-theme=black] .history-chart-card,:root[data-theme=black] .cut-summary,:root[data-theme=black] .finished-day-card,:root[data-theme=black] .theme-option,:root[data-theme=black] .cancel-closed-day{background:#1c2024;color:#f0f1f2;border-color:#373b40}
+:root[data-theme=black] .analysis-note,:root[data-theme=black] .view-tabs{background:#25292e;color:#c4c8cd}
+:root[data-theme=black] .view-tab.active{background:#3a3f45;color:#fff}
+:root[data-theme=black] .summary-grid div+div,:root[data-theme=black] .record-actions{border-color:#373b40}
+:root[data-theme=black] .money-input input,:root[data-theme=black] input,:root[data-theme=black] select{color:#f0f1f2}
+:root[data-theme=black] .shift-form select{background:#25292e;border-color:#454a50}
+:root[data-theme=black] .action-dialog,:root[data-theme=black] dialog{background:#1c2024;color:#f0f1f2;border-color:#373b40}
+:root[data-theme=black] dialog p:not(.eyebrow){color:#c0c4c9}
+:root[data-theme=black] .secondary-action{background:#25292e;color:#f0f1f2;border-color:#454a50}
+:root[data-theme=black] .primary-action,:root[data-theme=black] .primary-button{background:#e4e6e8;color:#111;border-color:#e4e6e8}
+:root[data-theme=black] .segment.active,:root[data-theme=black] .toast{background:#e4e6e8;color:#111}
+:root[data-theme=black] .history-icon{background:#25292e;color:#f0f1f2;border-color:#454a50}
+:root[data-theme=black] .cut-summary.current-cut{background:#090a0b;border-color:#454a50}
+:root[data-theme=black] .cut-breakdown-total{background:#24282d;border-color:#777}
+:root[data-theme=black] .cut-breakdown-total span,:root[data-theme=black] .cut-breakdown-total strong{color:#fff}
+:root[data-theme=black] .chart-fill{background:#62686f}
+:root[data-theme=black] .selected-day .chart-fill{background:#f0f1f2}
+:root[data-theme=black] .history-day strong{color:#f0f1f2}
+:root[data-theme=black] .day-status{background:#273c30;color:#a8dfb8}
+:root[data-theme=black] .day-status.finished,:root[data-theme=black] .day-status-tag.finished{background:#35393e;color:#d0d2d5}
+:root[data-theme=black] .cancel-closed-day{display:flex;flex-direction:column;gap:4px;text-align:left;padding:12px 15px;font-weight:800}
+:root[data-theme=black] .cancel-closed-day span{font-size:11px;font-weight:500;color:#adb3ba}
+:root[data-theme=white] body{background:#f4f4f2;color:#111}
+:root[data-theme=white] .summary-card,:root[data-theme=white] .primary-button,:root[data-theme=white] .primary-action{background:#111;border-color:#111;color:#fff}
+.theme-swatch.swatch-black{background:#101215}.theme-swatch.swatch-white{background:#f4f4f2;border:1px solid #bbb}
+.cancel-closed-day{width:100%;display:flex;flex-direction:column;gap:4px;text-align:left;padding:12px 15px;margin:-8px 0 16px;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink);font-weight:800;font-size:12px;cursor:pointer}
+.cancel-closed-day span{font-size:11px;font-weight:500;color:var(--muted)}
+:root[data-theme=blue] .cancel-closed-day{background:#19344e;color:#e9f1fa;border-color:#29455f}
+:root[data-theme=green] .cancel-closed-day{background:#1b3b2c;color:#eaf4ed;border-color:#2f5140}
+:root[data-theme=purple] .cancel-closed-day{background:#352846;color:#f0ebf5;border-color:#4a3a5d}
