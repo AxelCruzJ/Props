@@ -50,3 +50,76 @@
 [data-theme=purple] .view-tabs{background:#ebe5f0}
 [data-theme=purple] .summary-card .muted{color:#d0c4dc}
 [data-theme=purple] .day-status{background:#eee7f4;color:#60467d}
+
+
+/* Fondos completos por tema con superficies y contraste accesibles */
+:root[data-theme=light]{--theme-accent:#111;--ink:#111;--muted:#777;--line:#deded9;--paper:#fff;--soft:#f7f7f5}
+:root[data-theme=light] body{background:#f4f4f2;color:#111}
+:root[data-theme=light] .summary-card,:root[data-theme=light] .primary-button,:root[data-theme=light] .primary-action{background:#111;border-color:#111;color:#fff}
+:root[data-theme=dark]{--theme-accent:#e4e6e8;--ink:#f0f1f2;--muted:#a3a8ae;--line:#373b40;--paper:#1c2024;--soft:#292d32}
+:root[data-theme=dark] body{background:#101215;color:#f0f1f2}
+:root[data-theme=dark] .summary-card{background:#191c20;border-color:#292d32;color:#f5f5f5}
+:root[data-theme=dark] .summary-card .muted,:root[data-theme=dark] .summary-grid span{color:#aeb3b9}
+:root[data-theme=dark] .form-card,:root[data-theme=dark] .analysis-grid article,:root[data-theme=dark] .history-entry,:root[data-theme=dark] .history-day,:root[data-theme=dark] .history-item,:root[data-theme=dark] .history-chart-card,:root[data-theme=dark] .cut-summary,:root[data-theme=dark] .finished-day-card,:root[data-theme=dark] .theme-option{background:#1c2024;color:#f0f1f2;border-color:#373b40}
+:root[data-theme=dark] .analysis-note,:root[data-theme=dark] .view-tabs{background:#25292e;color:#c4c8cd}
+:root[data-theme=dark] .view-tab.active{background:#3a3f45;color:#fff}
+:root[data-theme=dark] .summary-grid div+div,:root[data-theme=dark] .record-actions{border-color:#373b40}
+:root[data-theme=dark] .money-input input,:root[data-theme=dark] input,:root[data-theme=dark] select{color:#f0f1f2}
+:root[data-theme=dark] .shift-form select{background:#25292e;border-color:#454a50}
+:root[data-theme=dark] .action-dialog,:root[data-theme=dark] dialog{background:#1c2024;color:#f0f1f2;border-color:#373b40}
+:root[data-theme=dark] dialog p:not(.eyebrow){color:#c0c4c9}
+:root[data-theme=dark] .secondary-action{background:#25292e;color:#f0f1f2;border-color:#454a50}
+:root[data-theme=dark] .primary-action,:root[data-theme=dark] .primary-button{background:#e4e6e8;color:#111;border-color:#e4e6e8}
+:root[data-theme=dark] .segment.active,:root[data-theme=dark] .toast{background:#e4e6e8;color:#111}
+:root[data-theme=dark] .cut-summary.current-cut{background:#090a0b;border-color:#454a50}
+:root[data-theme=dark] .cut-breakdown-total{background:#24282d;border-color:#777}
+:root[data-theme=dark] .cut-breakdown-total span,:root[data-theme=dark] .cut-breakdown-total strong{color:#fff}
+:root[data-theme=dark] .chart-fill{background:#62686f}
+:root[data-theme=dark] .selected-day .chart-fill{background:#f0f1f2}
+:root[data-theme=dark] .history-day strong{color:#f0f1f2}
+:root[data-theme=dark] .day-status{background:#273c30;color:#a8dfb8}
+:root[data-theme=dark] .day-status.finished,:root[data-theme=dark] .day-status-tag.finished{background:#35393e;color:#d0d2d5}
+:root[data-theme=blue]{--theme-accent:#5b9bd5;--ink:#e9f1fa;--muted:#a9bfd5;--line:#29455f;--paper:#19344e;--soft:#203d59}
+:root[data-theme=blue] body{background:#10283f;color:#e9f1fa}
+:root[data-theme=blue] .summary-card{background:#0b2035;border-color:#203e58}
+:root[data-theme=blue] .form-card,:root[data-theme=blue] .analysis-grid article,:root[data-theme=blue] .history-entry,:root[data-theme=blue] .history-day,:root[data-theme=blue] .history-item,:root[data-theme=blue] .history-chart-card,:root[data-theme=blue] .cut-summary,:root[data-theme=blue] .finished-day-card,:root[data-theme=blue] .theme-option{background:#19344e;color:#e9f1fa;border-color:#29455f}
+:root[data-theme=blue] .view-tabs,:root[data-theme=blue] .analysis-note{background:#18334d;color:#c5d6e7}
+:root[data-theme=blue] .view-tab.active{background:#294b6a;color:#fff}
+:root[data-theme=blue] .summary-card .muted,:root[data-theme=blue] .summary-grid span{color:#afc5da}
+:root[data-theme=blue] .primary-button,:root[data-theme=blue] .primary-action{background:#6ca5d8;border-color:#6ca5d8;color:#10283f}
+:root[data-theme=blue] .secondary-action{background:#203d59;color:#e9f1fa;border-color:#42617e}
+:root[data-theme=blue] .shift-form select{background:#203d59;color:#e9f1fa}
+:root[data-theme=blue] .cut-summary.current-cut{background:#0b2035;border-color:#416482}
+:root[data-theme=blue] .cut-breakdown-total{background:#19344e;border-color:#6ca5d8}
+:root[data-theme=blue] .cut-breakdown-total span,:root[data-theme=blue] .cut-breakdown-total strong,:root[data-theme=blue] .history-day strong{color:#fff}
+:root[data-theme=blue] .day-status{background:#294a66;color:#c5e2ff}
+:root[data-theme=green]{--theme-accent:#83b99b;--ink:#eaf4ed;--muted:#adc2b3;--line:#2f5140;--paper:#1b3b2c;--soft:#244735}
+:root[data-theme=green] body{background:#102b21;color:#eaf4ed}
+:root[data-theme=green] .summary-card{background:#0b2119;border-color:#294334}
+:root[data-theme=green] .form-card,:root[data-theme=green] .analysis-grid article,:root[data-theme=green] .history-entry,:root[data-theme=green] .history-day,:root[data-theme=green] .history-item,:root[data-theme=green] .history-chart-card,:root[data-theme=green] .cut-summary,:root[data-theme=green] .finished-day-card,:root[data-theme=green] .theme-option{background:#1b3b2c;color:#eaf4ed;border-color:#2f5140}
+:root[data-theme=green] .view-tabs,:root[data-theme=green] .analysis-note{background:#1a3829;color:#c7d9cc}
+:root[data-theme=green] .view-tab.active{background:#2b503c;color:#fff}
+:root[data-theme=green] .summary-card .muted,:root[data-theme=green] .summary-grid span{color:#b5cbbb}
+:root[data-theme=green] .primary-button,:root[data-theme=green] .primary-action{background:#83b99b;border-color:#83b99b;color:#102b21}
+:root[data-theme=green] .secondary-action{background:#244735;color:#eaf4ed;border-color:#41634f}
+:root[data-theme=green] .shift-form select{background:#244735;color:#eaf4ed}
+:root[data-theme=green] .cut-summary.current-cut{background:#0b2119;border-color:#476753}
+:root[data-theme=green] .cut-breakdown-total{background:#1b3b2c;border-color:#83b99b}
+:root[data-theme=green] .cut-breakdown-total span,:root[data-theme=green] .cut-breakdown-total strong,:root[data-theme=green] .history-day strong{color:#fff}
+:root[data-theme=green] .day-status{background:#264735;color:#bce6c9}
+:root[data-theme=purple]{--theme-accent:#b294d0;--ink:#f0ebf5;--muted:#c0b1ce;--line:#4a3a5d;--paper:#352846;--soft:#403250}
+:root[data-theme=purple] body{background:#251a34;color:#f0ebf5}
+:root[data-theme=purple] .summary-card{background:#1c1328;border-color:#3c2d4d}
+:root[data-theme=purple] .form-card,:root[data-theme=purple] .analysis-grid article,:root[data-theme=purple] .history-entry,:root[data-theme=purple] .history-day,:root[data-theme=purple] .history-item,:root[data-theme=purple] .history-chart-card,:root[data-theme=purple] .cut-summary,:root[data-theme=purple] .finished-day-card,:root[data-theme=purple] .theme-option{background:#352846;color:#f0ebf5;border-color:#4a3a5d}
+:root[data-theme=purple] .view-tabs,:root[data-theme=purple] .analysis-note{background:#31233f;color:#d8cde1}
+:root[data-theme=purple] .view-tab.active{background:#4a385e;color:#fff}
+:root[data-theme=purple] .summary-card .muted,:root[data-theme=purple] .summary-grid span{color:#c8bbd3}
+:root[data-theme=purple] .primary-button,:root[data-theme=purple] .primary-action{background:#b294d0;border-color:#b294d0;color:#251a34}
+:root[data-theme=purple] .secondary-action{background:#403250;color:#f0ebf5;border-color:#5a486a}
+:root[data-theme=purple] .shift-form select{background:#403250;color:#f0ebf5}
+:root[data-theme=purple] .cut-summary.current-cut{background:#1c1328;border-color:#624e75}
+:root[data-theme=purple] .cut-breakdown-total{background:#352846;border-color:#b294d0}
+:root[data-theme=purple] .cut-breakdown-total span,:root[data-theme=purple] .cut-breakdown-total strong,:root[data-theme=purple] .history-day strong{color:#fff}
+:root[data-theme=purple] .day-status{background:#49365c;color:#e0c9f5}
+:root[data-theme=light] .swatch-light{background:#f4f4f2;border:1px solid #ccc}
+.cancel-closure{display:block;margin:16px auto 0;font-size:12px}
