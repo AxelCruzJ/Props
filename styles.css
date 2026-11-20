@@ -244,3 +244,7 @@ body{min-height:100vh}
 .divided-empty{font-size:11px;color:var(--muted);padding:8px 2px}
 .divided-mode .split-pay-label{display:block}
 .divided-mode .split-pay-row{display:flex}
+
+.divided-controls button:disabled{opacity:.42;cursor:not-allowed;filter:grayscale(.35)}
+.divided-controls button:not(:disabled){box-shadow:0 2px 8px #00000012}
+.divided-mode #billTotal:disabled{color:var(--muted);border-bottom-style:dashed}
