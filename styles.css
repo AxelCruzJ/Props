@@ -248,3 +248,7 @@ body{min-height:100vh}
 .divided-controls button:disabled{opacity:.42;cursor:not-allowed;filter:grayscale(.35)}
 .divided-controls button:not(:disabled){box-shadow:0 2px 8px #00000012}
 .divided-mode #billTotal:disabled{color:var(--muted);border-bottom-style:dashed}
+
+/* Keep divided-entry amounts legible, including the locked account total. */
+.divided-mode .money-input input{color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1}
+.divided-mode #billTotal:disabled{color:var(--ink);-webkit-text-fill-color:var(--ink);opacity:1;border-bottom-style:solid}
